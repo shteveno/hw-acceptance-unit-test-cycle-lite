@@ -252,3 +252,7 @@ end
 Then /^show me the page$/ do
   save_and_open_page
 end
+
+Then /the director of "(.+)" should be "(.+)"/ do |movie, director|
+  expect(Movie.find_by_title(movie).director).to eq(director)
+end
