@@ -1443,3 +1443,116 @@ Processing by MoviesController#index as HTML
   [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('NC-17', 'PG', 'PG-13', 'R')[0m
   Rendered movies/index.html.haml within layouts/application (26.4ms)
 Completed 200 OK in 324ms (Views: 317.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/rails.png" for 73.15.6.13 at 2017-10-14 01:23:04 +0000
+
+
+Started GET "/movies" for 73.15.6.13 at 2017-10-14 01:23:07 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://werk-it-shteveno.c9users.io/movies?ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 34ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.15.6.13 at 2017-10-14 01:23:08 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (24.6ms)
+Completed 200 OK in 82ms (Views: 73.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/movies/7" for 73.15.6.13 at 2017-10-14 01:23:16 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered movies/show.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 51ms (Views: 40.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/5" for 73.15.6.13 at 2017-10-14 01:23:51 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered movies/show.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/movies/5" for 73.15.6.13 at 2017-10-14 01:24:04 +0000
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KodTw9EqaNd8sf30zHooD6RgcWcPvL2qG6nDVKP5J9UPSVo0IKPttIw00OAVHj0HfRKduNbmRHOiT3KwWLhzGQ==", "id"=>"5"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 5]]
+  [1m[36m (12.8ms)[0m  [1mcommit transaction[0m
+Redirected to https://werk-it-shteveno.c9users.io/movies
+Completed 302 Found in 18ms (ActiveRecord: 13.3ms)
+
+
+Started GET "/movies" for 73.15.6.13 at 2017-10-14 01:24:04 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://werk-it-shteveno.c9users.io/movies?ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.15.6.13 at 2017-10-14 01:24:04 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('NC-17', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/6" for 73.15.6.13 at 2017-10-14 01:24:08 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered movies/show.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/movies/6" for 73.15.6.13 at 2017-10-14 01:24:09 +0000
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oe5MsdjcitDfQmDzkBMm5x5zJC0BhVEN+jPIdVlx6NqEIEVGKVUPsy/HTedJdzPvxwHI8tjfqNRD1XmRojC8Fg==", "id"=>"6"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 6]]
+  [1m[36m (17.3ms)[0m  [1mcommit transaction[0m
+Redirected to https://werk-it-shteveno.c9users.io/movies
+Completed 302 Found in 23ms (ActiveRecord: 17.8ms)
+
+
+Started GET "/movies" for 73.15.6.13 at 2017-10-14 01:24:09 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://werk-it-shteveno.c9users.io/movies?ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.15.6.13 at 2017-10-14 01:24:09 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('NC-17', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies/" for 73.15.6.13 at 2017-10-14 01:25:36 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://werk-it-shteveno.c9users.io/movies?ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 30ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.15.6.13 at 2017-10-14 01:25:36 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (27.1ms)
+Completed 200 OK in 289ms (Views: 282.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/movies/7" for 73.15.6.13 at 2017-10-14 01:25:38 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered movies/show.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 21ms (Views: 14.2ms | ActiveRecord: 0.3ms)
